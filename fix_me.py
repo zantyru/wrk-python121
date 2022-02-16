@@ -33,33 +33,27 @@ class WaterDrop:
 
     def __eq__(self, other):
         self._check_type(other)
-        result = WaterDrop(self.volume == other.volume)
-        return result
+        return self.volume == other.volume
 
     def __ne__(self, other):
         self._check_type(other)
-        result = WaterDrop(self.volume != other.volume)
-        return result
+        return self.volume != other.volume
 
     def __lt__(self, other):
         self._check_type(other)
-        result = WaterDrop(self.volume < other.volume)
-        return result
+        return self.volume < other.volume
 
     def __le__(self, other):
         self._check_type(other)
-        result = WaterDrop(self.volume <= other.volume)
-        return result
+        return self.volume <= other.volume
 
     def __gt__(self, other):
         self._check_type(other)
-        result = WaterDrop(self.volume > other.volume)
-        return result
+        return self.volume > other.volume
 
     def __ge__(self, other):
         self._check_type(other)
-        result = WaterDrop(self.volume >= other.volume)
-        return result
+        return self.volume >= other.volume
 
 if __name__ == '__main__':
     wd1 = WaterDrop(10)
