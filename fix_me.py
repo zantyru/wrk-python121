@@ -7,9 +7,11 @@ class WaterDrop:
         return f"{class_name}({self.volume})"
 
     def _check_type(self, other):
-        if not isinstance(other, WaterDrop):
-            raise TypeError("Ожидается экземпляр класса WaterDrop, "
-                            f"но получен тип {type(other)}.")
+        if not isinstance(other, self.__class__):
+            raise TypeError(
+                f"Ожидается экземпляр класса {self.__class__.__name__}, "
+                f"но получен тип {type(other)}."
+            )
 
     def __add__(self, other):
         self._check_type(other)
